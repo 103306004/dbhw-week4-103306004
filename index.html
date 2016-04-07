@@ -99,27 +99,6 @@
             var HTMLSpotList = FreeSpotList.map(function(wifi) {
                 var HTMLString = '<tr></td><td data-th="Area">' + FreeSpotList.AREA + '</td><td data-th="Name">' + FreeSpotList.HOTSPOT_NAME + '</td><td data-th="Type">' + FreeSpotList.HOTSPOT_TYPE + '</td><td data-th="Address">' + FreeSpotList.ADDRESS + '</td><td data-th="LNG">' + FreeSpotList.LNG + '</td><td data-th="LAT">' + FreeSpotList.LAT + '</td></tr>';
                 var items = "";
-                for (var key in wifi)
-                {
-                  if (key == "AREA") {
-                    items = items + "<li class='list-group-item'>" + "類別" + ":" + wifi[key] + "</li>";
-                  }
-                  if (key == "HOTSPOT_NAME") {
-                    items = items + "<li class='list-group-item'>" + "熱點名稱" + ":" + wifi[key] + "</li>";
-                  }
-                  if (key == "HOTSPOT_TYPE") {
-                    items = items + "<li class='list-group-item'>" + "熱點類別" + ":" + wifi[key] + "</li>";
-                  }
-                  if (key == "ADDRESS") {
-                    items = items + "<li class='list-group-item'>" + "地址" + ":" + wifi[key] + "</li>";
-                  }
-                  if (key == "LNG") {
-                    items = items + "<li class='list-group-item'>" + "經度" + ":" + wifi[key] + "</li>";
-                  }
-                  if (key == "LAT") {
-                    items = items + "<li class='list-group-item'>" + "緯度" + ":" + wifi[key] + "</li>";
-                  }
-                }
                 var HTMLString = HTMLString + items + "</ul></p><div>";
                 return HTMLString;
             });
