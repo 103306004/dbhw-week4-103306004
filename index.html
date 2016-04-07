@@ -95,7 +95,7 @@
         if (err) {
             console.log(err);
         } else {
-            var FreeSpotList = JSON.parse(data);
+            var FreeSpotList = data.result.results;
             var HTMLSpotList = FreeSpotList.map(function(wifi) {
                 var HTMLString = '<tr></td><td data-th="Area">' + FreeSpotList.AREA + '</td><td data-th="Name">' + FreeSpotList.HOTSPOT_NAME + '</td><td data-th="Type">' + FreeSpotList.HOTSPOT_TYPE + '</td><td data-th="Address">' + FreeSpotList.ADDRESS + '</td><td data-th="LNG">' + FreeSpotList.LNG + '</td><td data-th="LAT">' + FreeSpotList.LAT + '</td></tr>';
                 var items = "";
