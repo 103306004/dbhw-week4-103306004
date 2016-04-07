@@ -38,7 +38,39 @@
       <div class="row">
         <div class="col-md-4">
           <table class="table" id="content"> 
-          </table>        
+          </table>
+          <div class="cssload-wrap">
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+          <div class="cssload-circle"></div>
+        </div>
         </div>
       </div>
 
@@ -60,6 +92,10 @@
             var HTMLSpotList = FreeSpotList.map(function(wifi) {
                 var HTMLString = '<tr></td><td data-th="hotspotName">' + FreeSpotList.AREA + '</td><td data-th="hotspotType">' + FreeSpotList.HOTSPOT_TYPE + '</td><td data-th="area">' + FreeSpotList.HOTSPOT_NAME + '</td><td data-th="address">' + FreeSpotListFreeSpotList.ADDRESS + '</td><td data-th="LNG">' + FreeSpotList.LNG + '</td><td data-th="LAT">' + FreeSpotList.LAT + '</td></tr>';
                 var items = "";
+                for (var key in wifi)
+                {
+
+                }
                 var HTMLString = HTMLString + items + "</ul></p><div>";
                 console.log(HTMLString);
                 return HTMLString;
@@ -74,8 +110,6 @@
     })
 
 }
-';             
-                var items = "";
                 for (var key in wifi) {
                     if (key == "A_Location") {
                         items = items + "<li class='list-group-item'>" + "所在館區" + ":" + animal[key] + "</li>";
