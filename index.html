@@ -90,11 +90,28 @@
         } else {
             var FreeSpotList = JSON.parse(data);
             var HTMLSpotList = FreeSpotList.map(function(wifi) {
-                var HTMLString = '<tr></td><td data-th="hotspotName">' + FreeSpotList.AREA + '</td><td data-th="hotspotType">' + FreeSpotList.HOTSPOT_TYPE + '</td><td data-th="area">' + FreeSpotList.HOTSPOT_NAME + '</td><td data-th="address">' + FreeSpotListFreeSpotList.ADDRESS + '</td><td data-th="LNG">' + FreeSpotList.LNG + '</td><td data-th="LAT">' + FreeSpotList.LAT + '</td></tr>';
+                var HTMLString = '<tr></td><td data-th="FreespotArea">' + FreeSpotList.AREA + '</td><td data-th="FreespotName">' + FreeSpotList.HOTSPOT_NAME + '</td><td data-th="hotspotType">' + FreeSpotList.HOTSPOT_TYPE + '</td><td data-th="address">' + FreeSpotListFreeSpotList.ADDRESS + '</td><td data-th="LNG">' + FreeSpotList.LNG + '</td><td data-th="LAT">' + FreeSpotList.LAT + '</td></tr>';
                 var items = "";
                 for (var key in wifi)
                 {
-
+                  if (key == "AREA") {
+                    items = items + "<li class='list-group-item'>" + "類別" + ":" + wifi[key] + "</li>";
+                  }
+                  if (key == "HOTSPOT_NAME") {
+                    items = items + "<li class='list-group-item'>" + "熱點名稱" + ":" + wifi[key] + "</li>";
+                  }
+                  if (key == "HOTSPOT_TYPE") {
+                    items = items + "<li class='list-group-item'>" + "熱點類別" + ":" + wifi[key] + "</li>";
+                  }
+                  if (key == "ADDRESS") {
+                    items = items + "<li class='list-group-item'>" + "地址" + ":" + wifi[key] + "</li>";
+                  }
+                  if (key == "LNG") {
+                    items = items + "<li class='list-group-item'>" + "經度" + ":" + wifi[key] + "</li>";
+                  }
+                  if (key == "LAT") {
+                    items = items + "<li class='list-group-item'>" + "緯度" + ":" + wifi[key] + "</li>";
+                  }
                 }
                 var HTMLString = HTMLString + items + "</ul></p><div>";
                 console.log(HTMLString);
@@ -103,50 +120,8 @@
             WebFreeSpotList.forEach(function(html) {
                 $(html).appendTo("#content");
             });
-
-            $('.sk-cube-grid').css('display', 'none');
-
-        }
-    })
-
-}
-                for (var key in wifi) {
-                    if (key == "A_Location") {
-                        items = items + "<li class='list-group-item'>" + "所在館區" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Name_Latin") {
-                        items = items + "<li class='list-group-item'>" + "學名" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Phylum") {
-                        items = items + "<li class='list-group-item'>" + "門" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Class") {
-                        items = items + "<li class='list-group-item'>" + "綱" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Order") {
-                        items = items + "<li class='list-group-item'>" + "目" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Family") {
-                        items = items + "<li class='list-group-item'>" + "科" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Conservation") {
-                        items = items + "<li class='list-group-item'>" + "保護層級" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Distribution") {
-                        items = items + "<li class='list-group-item'>" + "分佈" + ":" + animal[key] + "</li>";
-                    }
-                    if (key == "A_Habitat") {
-                        items = items + "<li class='list-group-item'>" + "棲息地" + ":" + animal[key] + "</li>";
-                    }
-                }
-                var HTMLString = HTMLString + "<p><ul class='list-group'>" + items + "</ul></p><div>";
-                return HTMLString;
-            });
-            HTMLanimalList.forEach(function(html) {
-                $(html).appendTo("#content");
-            });
-            $('.sk-cube-grid').css('display', 'none');
-            $('.circle').css('display', 'none');
+ 
+            $('.cssload-circle').css('display', 'none');
         }
       });
     });
