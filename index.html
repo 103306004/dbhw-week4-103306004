@@ -90,7 +90,7 @@
         } else {
             var FreeSpotList = JSON.parse(data);
             var HTMLSpotList = FreeSpotList.map(function(wifi) {
-                var HTMLString = "<div class='col-md-4 drop-"+(Math.round(Math.random()*10000%2)+1)+"'><div class='panel panel-success'><div class=panel-heading><div style='text-align:center'><h2 style='color:green'>" + FreeSpotList.AREA + "</h2></div></div></div>" + FreeSpotList.HOTSPOT_NAME + FreeSpotList.HOTSPOT_TYPE + FreeSpotListFreeSpotList.ADDRESS + FreeSpotList.LNG + FreeSpotList.LAT + "'<p><ul class='list-group'>";
+                var HTMLString = "<div class='col-md-4 drop-"+(Math.round(Math.random()*10000%2)+1)+"'><div class='panel panel-success'><div class=panel-heading><div style='text-align:center'><h2 style='color:green'>" + FreeSpotList.AREA + "</h2></div></div></div>" + FreeSpotList.HOTSPOT_NAME + FreeSpotList.HOTSPOT_TYPE + FreeSpotList.ADDRESS + FreeSpotList.LNG + FreeSpotList.LAT + "'<p><ul class='list-group'>";
                 var items = "";
                 for (var key in wifi)
                 {
