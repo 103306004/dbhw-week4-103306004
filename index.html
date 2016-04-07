@@ -114,10 +114,9 @@
                   }
                 }
                 var HTMLString = HTMLString + items + "</ul></p><div>";
-                console.log(HTMLString);
                 return HTMLString;
             });
-            WebFreeSpotList.forEach(function(html) {
+            FreeSpotList.forEach(function(html) {
                 $(html).appendTo("#content");
             });
  
